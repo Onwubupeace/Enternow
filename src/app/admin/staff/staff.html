@@ -1,0 +1,44 @@
+<div class="staff-details">
+    <h2>{{ staff.name }} — {{ staff.department }}</h2>
+    <p><strong>Staff ID:</strong> {{ staff.id }}</p>
+  
+    <div class="stats">
+      <div class="card">
+        <p>Total Sign-Ins</p>
+        <h3>{{ staff.totalSignIns }}</h3>
+      </div>
+      <div class="card">
+        <p>Lateness Count</p>
+        <h3>{{ staff.latenessCount }}</h3>
+      </div>
+      <div class="card">
+        <p>Deductions</p>
+        <h3>₦{{ staff.deductions | number }}</h3>
+      </div>
+    </div>
+  </div>
+  
+  <div class="sign-in-history">
+    <h3>Sign-In History</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of signInHistory">
+          <td>{{ record.date }}</td>
+          <td>{{ record.time }}</td>
+          <td [ngClass]="{
+            'early': record.status === 'Early',
+            'late': record.status === 'Late'
+          }">
+            {{ record.status }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

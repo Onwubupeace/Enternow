@@ -1,0 +1,46 @@
+.admin-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f4f7fa; 
+}
+
+
+.app-header {
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  z-index: 10;
+}
+
+
+app-admin-header {
+  color: white;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  display: block;
+}
+
+
+
+.admin-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+app-admin-side-nav {
+  width: 260px;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05); 
+  border-right: none;
+  padding: 1.5rem 1rem; 
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 3rem; 
+  overflow-y: auto;
+  background-color: #f4f7fa; 
+}

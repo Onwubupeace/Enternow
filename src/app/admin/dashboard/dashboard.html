@@ -1,0 +1,62 @@
+<p class="page-title">ENTERNOW ADMIN DASHBOARD!</p>
+<h4>Welcome Admin, Chekwube</h4>
+<!-- <div class="wlc-txt">
+  <p>Admin Dashboard Page</p>
+</div> -->
+
+<div class="body-content">
+  <div class="content-card">
+    <p>Sign-ins</p>
+    <h2>2000</h2>
+  </div>
+  <div class="content-card">
+    <p>Lateness %</p>
+    <h2>5%</h2>
+  </div>
+  <div class="content-card">
+    <p>Early Birds %</p>
+    <h2>95</h2>
+  </div>
+  <div class="content-card">
+    <p>Absent</p>
+    <h2>18</h2>
+  </div>
+</div>
+
+<div class="staff-container">
+  <div class="staff">
+    <table>
+      <tr><th colspan="2">Top Earliest Staff</th></tr>
+      <tr><td>Peace</td><td>Backend Dev</td></tr>
+      <tr><td>Vera</td><td>Lawyer</td></tr>
+      <tr><td>LastBorn</td><td>Engineer</td></tr>
+    </table>
+  </div>
+
+  <div class="lateness">
+    <table>
+      <tr><th colspan="2">Lateness Count</th></tr>
+      <tr><td>Tobi</td><td>1/5</td></tr>
+      <tr><td>Seun</td><td>4/5</td></tr>
+      <tr><td>Mayowa</td><td>5/5</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="signin-section">
+  <button class="create-btn" (click)="toggleForm()">Sign-In</button>
+  </div>
+
+<div *ngIf="showForm" class="modal-backdrop">
+  <div class="signin-form">
+    <h3>Manual Sign-In (Security Assist)</h3>
+
+    <form (ngSubmit)="submitForm()">
+      <input type="text" placeholder="Staff ID" [(ngModel)]="staffId" name="staffId" required>
+      <input type="text" placeholder="Staff Name" [(ngModel)]="staffName" name="staffName" required>
+      <input type="text" placeholder="Department" [(ngModel)]="department" name="department" required>
+      <input type="time" placeholder="Time" [(ngModel)]="time" name="time" required>
+      <button type="submit" class="submit-btn">Sign In</button>
+    </form>
+  </div>
+</div>

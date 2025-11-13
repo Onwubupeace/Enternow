@@ -1,0 +1,18 @@
+<div class="login-wrapper">
+    <form class="login-form" [formGroup]="signInForm">
+  
+        <h1>Sign In</h1>
+        <mat-form-field appearance="outline">
+            <mat-label>Staff Id</mat-label>
+            <input matInput type="text" formControlName="staffId">
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password">
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" type="submit" (click)="submitForm()">Sign In</button>
+  
+    </form>
+  </div>
