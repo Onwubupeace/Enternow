@@ -32,7 +32,7 @@ const routes: Routes = [
     component : Login
   },{
     path : '',
-    redirectTo : 'login',
+    redirectTo : 'home',
     pathMatch : 'full'
   }
 

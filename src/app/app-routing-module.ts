@@ -11,7 +11,7 @@ const routes: Routes = [
     loadChildren : () => import('./staff/staff-module').then( m => m.StaffModule)
   },{
     path : '',
-    redirectTo : 'staff',
+    redirectTo : 'admin',
     pathMatch : 'full'
   }
 ];
